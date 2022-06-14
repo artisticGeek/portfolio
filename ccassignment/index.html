@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="JS/jquery.js"></script>
+        <script src="JS/slim.min.js"></script>
+        <script src="JS/tether.min.js"></script>
+        <script src="JS/bootstrap.min.js"></script>
+       
+        
+    </head>
+    <body>
+        <script>
+            alert("It is recommended that you view the page on your laptop or desktop PC");
+
+        </script>
+    <nav class="navbar navbar-dark bg-primary">
+           <h1 class="navbar-brand" style="color:white" align="center">
+                Cloud Computing Assignment
+           </h1>
+    </nav>
+       
+        
+       <div class="container-fluid" style="background-color:#e6f5ff">
+        <div class="row">
+    <div class="col" align="center">
+     <h4 style="color: blue">Demo: <span class="badge badge-secondary">Web 2.0</span></h4>
+    </div>      
+      </div>             
+       </div>
+       <br>
+       <br>
+       <div class="container">
+            <div class="row">
+                <div class="col-md-12" align="center">
+                  <div class="alert alert-info">
+  Toggle Web 2.0 in the working of the Sample System setup below:   
+                      <span><button id="activate" class="btn btn-primary">Activate</button></span>
+</div>
+                </div>
+           </div>
+           
+           <div id="test" class="row" style="background-color:#e6f5ff; margin-bottom: 1px">
+               <div class="col-md-12" align="center" >
+                   <small id="styleb" class="text-muted" align="center">Old- Style browsing</small>
+                   </div>
+               
+           </div>
+           
+           <div class="row" style="background-color:#e6f5ff; padding-top: 10px">
+               <br> 
+               <div class="col-md-4 align-self-center" align="center" style=" padding-right:0px;">
+                   <div class="card text-white bg-success mb-3" style="max-width:match-parent">
+  <div class="card-header bg-success">Machine 1</div>
+  <div class="card-body">
+    <h4 class="card-title">Sender</h4>
+      <i class="material-icons md-90">laptop_mac</i>
+    <p class="card-text">This machine sends a requests to the server and writes data in it. </p>
+      <div class="input-group">
+      <input type="text" id="mytext" class="form-control" placeholder="Type and click to send data">
+      <span class="input-group-btn">
+       <button id="upload" class="btn btn-dark" type="button">Go!</button >
+      </span>
+    </div>
+      <br>  
+      <p>(The above data goes to the server as the button is clicked)
+        </p>
+      <br>
+  </div>
+</div>
+                </div>
+               
+               <div class="col-md-1 align-self-center" style="padding-left:0px; padding-right:0px;" align="center">
+                   <div class="badge badge-info" id="t1" style="visibility: hidden; ">Sending<br></div>
+                   <div class="progress" style="height: 10px">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" id="sp" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+</div>
+                     
+                </div>
+               
+               <div class="col-md-2 align-self-center" align="center"  style="padding-left:0px; padding-right:0px">
+                <div class="badge badge-info" id="t2" style="visibility: hidden;">Posted on Server<br></div>
+                   <div class="card bg-secondary mb-3" style="max-width: 20rem;">
+  <div class="card-header bg-secondary"></div>
+  <div class="card-body">
+    <h4 class="card-title">Server</h4>
+      <i class="material-icons md-90">phonelink</i>
+      <p class="card-text">This machine handles requests</p>
+  </div>
+</div>
+                
+                </div>
+               
+                <div class="col-md-1 align-self-center" style="padding-left:0px; padding-right:0px;" align="center">
+                   <div class="badge badge-info" id="t3" style="visibility: hidden; ">Requesting<br></div>
+                   <div id="g3" class="progress" style="height: 10px;transform: scaleX(-1);" >
+  <div class="progress-bar progress-bar-striped progress-bar-animated" id="rp1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; visibility: hidden"></div>
+</div>
+                    <div class="badge badge-info" id="t6" style="visibility: hidden; "><br></div>
+                    <div class="progress" style="height: 5px; transform: scaleX(-1);" id="finallydone">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" id="rp3" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; visibility: hidden;"></div>
+</div>
+                    <div class="badge badge-info" id="t4" style="visibility: hidden; ">Posting<br></div>
+                    <div class="progress" style="height: 10px;" >
+  <div class="progress-bar progress-bar-striped progress-bar-animated" id="rp2" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; visibility: hidden"></div>
+</div>
+                     
+                </div>
+               
+               <div class="col-md-4 align-self-center" align="center" style=" padding-left:0px;">
+                   <div class="badge badge-info" id="t5" style="visibility: hidden;">Recieved<br></div>
+                   <div class="card text-white bg-info mb-3" style="max-width: match-parent; margin-bottom: 100%">
+  <div class="card-header bg-info">Machine 2</div>
+  <div class="card-body">
+    <h4 class="card-title">Reciever</h4>
+      <i class="material-icons md-90">laptop_mac</i>
+    <p class="card-text">This machine fetches data from the server 
+      <span><button class="btn btn-primary" id="reload"><i class="material-icons md-18">refresh</i></button></span>
+      </p>
+      
+      <ul id="mylist">
+
+</ul>
+  </div>
+</div>
+                </div>
+              
+               
+           </div>
+           <div class="row">
+            <br>
+           </div>
+           <div class="row">
+                <div class="col-md-4" align="center">
+                  <div class="alert alert-danger">
+                    <strong>  Machine 1:</strong> Sends data as the listener on 'Go' button is clicked. 
+Modern web browsing includes Client side data validations before sending data to the server.
+                      <br> It is represented by validating the blank field here.
+                      
+</div>
+               </div>
+                    <div class="col-md-4" align="center">
+                  <div class="alert alert-danger">
+                     <strong> Server:</strong> Sends data and recieve requests. 
+                      REST services are used now a days to have better functionality in this side.
+                      <br> 
+                      <br>In old style browsing, the server saved data and sent it only when a machine requested it.
+                      
+</div>
+                    
+                </div>
+               <div class="col-md-4" align="center">
+                  <div class="alert alert-danger">
+  <strong>Machine 2:</strong> It is the client machine that has to browse. Modern day techiques like AJAX and frameworks like SOAP and REST help create flickr free pages.
+                      <br> In old style browsing, the page needed to be reloaded in order to get fresh data as represented here.
+                      
+</div>
+                    
+                </div>
+              
+           </div>
+        
+       </div>
+
+<hr>
+        
+<div class="breadcrumb text-grey" align="center">Click on the link to download the soft copy of the assignment on 'Research innovations in Cloud Computing' as mailed <button type="button" class="btn btn-default"><a href="http://www.agampreetsingh.com/ccassignment/softcopy.pdf" target="blank">Download</a></button></div>
+        <div class="container-fluid text-white navbar navbar-dark bg-dark" style="background-color: #20587E; margin-top:35px">
+        <div class="row">
+            <div class="col-md-3">
+                
+                
+                Submitted to: Kanwaljeet Ma'am
+               </div>
+            <div class="col-md-3">
+                Roll No: 2014CSA2005
+               </div>
+               <div class="col-md-3">
+                Class: B. Tech Sem 7
+               </div>
+               <div class="col-md-3">
+                 E-mail: <a href="mailto:agampreet_singh@yahoo.com">agampreet_singh@yahoo.com</a>
+               </div>
+            
+           </div>
+            
+        </div>
+       <script src="JS/script.js"></script>
+        
+    </body>
+</html>
